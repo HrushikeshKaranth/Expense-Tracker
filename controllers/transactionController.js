@@ -1,4 +1,5 @@
-const Transaction = require('../models/Transaction')
+const Transaction = require('../models/Transaction');
+
 // @desc Get all transactions
 // @route GET /api/v1/transactions
 // @access Public
@@ -55,21 +56,20 @@ exports.addTransactions = async (req, res, next) => {
 // @access Public
 exports.deleteTransactions = async (req, res, next) => {
     try {
-        const transaction = await Transaction.findById(req.params.id)
-
+        const transaction = await Transaction.findByIdAndDelete(req.params.id);
+        console.log(transaction);
         if (!transaction) {
             return res.status(404).json({
                 success: false,
                 error: 'No transaction found'
             });
         }
-
-        await transaction.remove();
-
-        return res.status(200).json({
-            success: true,
-            data: {}
-        })
+        else{
+            return res.status(200).json({
+                success: true,
+                data: {}
+            })
+        }
     } catch (error) {
         return res.status(500).json({
             success: false,
