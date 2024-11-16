@@ -10,7 +10,7 @@ const initialState = {
 
 // Create context
 export const GlobalContext = createContext(initialState);
-
+export const PASS = 'Hrushi@476';
 // Provider component
 export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);

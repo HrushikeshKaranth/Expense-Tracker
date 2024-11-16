@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -16,13 +16,15 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  /* font-family: 'Lato', sans-serif; */
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
 
 .container {
-  margin: 30px auto;
+  margin: 0px;
   width: 400px;
+  padding: 5%;
 }
 
 h1 {
@@ -96,11 +98,15 @@ input[type='number'] {
   border: 0;
   display: block;
   font-size: 16px;
-  margin: 10px 0 30px;
+  margin: 10px 0 10px;
   padding: 10px;
   width: 100%;
 }
-
+.transaction-buttons{
+  margin: 10px 0px 0px 0px;
+  display: flex;
+  gap: 5%;
+}
 .btn:focus,
 .delete-btn:focus {
   outline: 0;
