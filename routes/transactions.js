@@ -3,7 +3,8 @@ const router = express.Router();
 const { 
     getTransactions, 
     addTransactions, 
-    deleteTransactions 
+    deleteTransactions,
+    runConnectionTest
     } = require('../controllers/transactionController')
 
 router
@@ -14,5 +15,9 @@ router
 router
     .route('/:id')
     .delete(deleteTransactions);
+
+router
+    .route('/test')
+    .get(runConnectionTest);
     
 module.exports = router;
