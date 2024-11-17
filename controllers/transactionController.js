@@ -85,13 +85,13 @@ exports.runConnectionTest = async (req, res, next) => {
     try {
         return res.status(200).json({
             success: true,
-            error: 'Server is Connected!'
+            msg: 'Server is Connected!'
         })
     }
     catch{
         return res.status(500).json({
             success:false,
-            error: 'Connection Failed!'
+            msg: 'Connection Failed!'
         })
     }
 }
