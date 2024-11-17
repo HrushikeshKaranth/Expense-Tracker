@@ -79,7 +79,7 @@ exports.deleteTransactions = async (req, res, next) => {
 }
 
 // @desc Run Connection Test
-// @route DELETE /api/v1/transactions/test
+// @route TEST /api/v1/transactions/test
 // @access Public
 exports.runConnectionTest = async (req, res, next) => {
     try {
