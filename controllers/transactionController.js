@@ -20,7 +20,7 @@ exports.getTransactions = async (req, res, next) => {
     }
 }
 
-// @desc Add transactions
+// @desc Add transaction
 // @route POST /api/v1/transactions
 // @access Public
 exports.addTransactions = async (req, res, next) => {
@@ -78,7 +78,7 @@ exports.deleteTransactions = async (req, res, next) => {
     }
 }
 
-// @desc Run Connection Test
+// @desc Test Connection 
 // @route TEST /api/v1/transactions/test
 // @access Public
 exports.runConnectionTest = async (req, res, next) => {
