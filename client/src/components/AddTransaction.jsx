@@ -12,26 +12,26 @@ export const AddTransaction = () => {
 
     function createTransaction(isCredit) {
         // e.preventDefault();
-        let pass = prompt('Enter password');
-        if(pass === PASS){
-            if (isCredit) {
-                const newTransaction = {
-                    text,
-                    amount: +amount
-                }
-                addTransaction(newTransaction);
+        if (isCredit) {
+            const newTransaction = {
+                text,
+                amount: +amount
             }
-            else {
-                const newTransaction = {
-                    text,
-                    amount: -amount
-                }
-                addTransaction(newTransaction);
+            addTransaction(newTransaction);
+        }
+        else {
+            const newTransaction = {
+                text,
+                amount: -amount
             }
+            addTransaction(newTransaction);
         }
-        else{
-            alert('Wrong Password!');
-        }
+        // let pass = prompt('Enter password');
+        // if(pass === PASS){
+        // }
+        // else{
+        //     alert('Wrong Password!');
+        // }
     }
     return (
         <>

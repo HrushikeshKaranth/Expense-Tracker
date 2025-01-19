@@ -8,13 +8,13 @@ export const Transaction = ({ transaction }) => {
     const sign = transaction.amount < 0 ? '-' : '+';
 
     function deleteThisTransaction(){
-        let pass = prompt('Enter password');
-        if(pass === PASS){
-            deleteTransaction(transaction._id);
-        }
-        else{
-            alert('Wrong password!');
-        }
+        deleteTransaction(transaction._id);
+        // let pass = prompt('Enter password');
+        // if(pass === PASS){
+        // }
+        // else{
+        //     alert('Wrong password!');
+        // }
     }
 
     return (
