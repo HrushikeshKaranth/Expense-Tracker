@@ -11,7 +11,6 @@ export const AddTransaction = () => {
     const { addTransaction } = useContext(GlobalContext)
 
     function createTransaction(isCredit) {
-        // e.preventDefault();
         if (isCredit) {
             const newTransaction = {
                 text,
